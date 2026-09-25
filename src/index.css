@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Nunito:wght@400;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-body: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-label: 'Nunito', 'Noto Sans SC', 'PingFang SC', sans-serif;
+
+  /* primary - 深绿 #2E7D32 */
+  --primary-50: 0.972 0.024 148;
+  --primary-100: 0.936 0.055 148;
+  --primary-200: 0.876 0.090 148;
+  --primary-300: 0.790 0.128 148;
+  --primary-400: 0.660 0.152 148;
+  --primary-500: 0.523 0.143 148;
+  --primary-600: 0.452 0.126 148;
+  --primary-700: 0.380 0.108 148;
+  --primary-800: 0.312 0.090 148;
+  --primary-900: 0.242 0.070 148;
+  --primary-950: 0.160 0.050 148;
+
+  /* secondary - 嫩绿 #8BC34A */
+  --secondary-50: 0.976 0.020 130;
+  --secondary-100: 0.942 0.048 130;
+  --secondary-200: 0.895 0.078 130;
+  --secondary-300: 0.840 0.112 130;
+  --secondary-400: 0.782 0.140 130;
+  --secondary-500: 0.735 0.158 130;
+  --secondary-600: 0.652 0.142 130;
+  --secondary-700: 0.540 0.118 130;
+  --secondary-800: 0.440 0.098 130;
+  --secondary-900: 0.340 0.078 130;
+  --secondary-950: 0.240 0.058 130;
+
+  /* accent - 暖橙 #FF9800 / 亮黄 #FFC107 */
+  --accent-50: 0.980 0.030 75;
+  --accent-100: 0.958 0.062 76;
+  --accent-200: 0.915 0.100 78;
+  --accent-300: 0.872 0.140 80;
+  --accent-400: 0.835 0.168 84;
+  --accent-500: 0.770 0.176 62;
+  --accent-600: 0.700 0.170 55;
+  --accent-700: 0.600 0.152 50;
+  --accent-800: 0.500 0.124 47;
+  --accent-900: 0.400 0.100 45;
+  --accent-950: 0.280 0.072 43;
+
+  /* background - 白 / 极浅米白 */
+  --background-50: 0.995 0.002 130;
+  --background-100: 0.982 0.006 130;
+  --background-200: 0.945 0.010 130;
+  --background-300: 0.892 0.014 130;
+  --background-400: 0.820 0.018 130;
+  --background-500: 0.740 0.022 130;
+  --background-600: 0.640 0.024 130;
+  --background-700: 0.540 0.022 130;
+  --background-800: 0.440 0.020 130;
+  --background-900: 0.340 0.018 130;
+  --background-950: 0.230 0.014 130;
+
+  /* foreground - 深墨绿文字 */
+  --foreground-50: 0.98 0.006 145;
+  --foreground-100: 0.95 0.009 145;
+  --foreground-200: 0.9 0.012 145;
+  --foreground-300: 0.82 0.015 145;
+  --foreground-400: 0.7 0.018 145;
+  --foreground-500: 0.58 0.021 145;
+  --foreground-600: 0.478 0.024 145;
+  --foreground-700: 0.382 0.026 145;
+  --foreground-800: 0.302 0.028 145;
+  --foreground-900: 0.238 0.03 145;
+  --foreground-950: 0.176 0.03 145;
+}
+
+.dark {
+  --primary-50: 0.968 0.026 148;
+  --primary-100: 0.928 0.056 148;
+  --primary-200: 0.862 0.09 148;
+  --primary-300: 0.776 0.126 148;
+  --primary-400: 0.664 0.15 148;
+  --primary-500: 0.598 0.148 148;
+  --primary-600: 0.678 0.152 148;
+  --primary-700: 0.766 0.128 148;
+  --primary-800: 0.848 0.096 148;
+  --primary-900: 0.912 0.06 148;
+  --primary-950: 0.958 0.03 148;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: oklch(var(--background-100));
+  color: oklch(var(--foreground-950));
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 隐藏滚动条但保留滚动能力 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 表单蜜罐字段：非内联方式隐藏，避免被自动填充 */
+.field-verify-trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 首屏大图 banner 进场动画：淡入 + 轻微缩放 */
+@keyframes hero-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-zoom {
+  animation: hero-zoom-in 1.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-hero-fade-up {
+  animation: hero-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 首屏艺术字标题：毛笔书法字体 + 柔和描边阴影 */
+.hero-art-title {
+  font-family: 'Ma Shan Zheng', var(--font-heading);
+  letter-spacing: 0.03em;
+  text-shadow: 0 4px 22px oklch(var(--foreground-950) / 0.5), 0 1px 2px oklch(var(--foreground-950) / 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-zoom,
+  .animate-hero-fade-up {
+    animation: none;
+  }
+}
