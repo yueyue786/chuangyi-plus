@@ -1,13 +1,12 @@
-import { createClient, type Client, type InValue } from "@libsql/client";
-import path from "node:path";
-import { fileURLToPath, pathToFileURL } from "node:url";
+import { createClient, type Client, type InValue } from "@libsql/client/web";
 import type { UserRow, DemandRow, ApplicationRow, ProjectRow, MessageRow } from "./types.js";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dbPath = process.env.SQLITE_PATH || path.join(__dirname, "../data.sqlite");
-
-// 远程优先（Turso 等 libsql 协议），未配置 DATABASE_URL 时回退到本地文件
-const url = process.env.DATABASE_URL || pathToFileURL(dbPath).href;
+// Serverless 环境使用纯 JS（hrana HTTP）客户端，避免原生 libsql 平台包打包问题
+const url = process.env.DATABASE_URL;
+if (!url) {
+  throw new Error("DATABASE_URL 未配置：请设置 libsql/https 数据库连接地址");
+}
+const dbUrl: string = url;
 const authToken = process.env.TURSO_AUTH_TOKEN;
 
 const db: Client = createClient(authToken ? { url, authToken } : { url });
@@ -102,7 +101,7 @@ export async function initDb() {
   ];
 
   // 本地文件连接显式开启外键；Turso 远程默认已开启
-  if (url.startsWith("file:")) {
+  if (dbUrl.startsWith("file:")) {
     statements.unshift("PRAGMA foreign_keys = ON");
   }
   await db.batch(statements, "write");

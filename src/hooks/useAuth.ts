@@ -12,10 +12,32 @@ import {
 const CHANGE_EVENT = "cy-auth-change";
 
 let cachedUser: User | null = null;
-let initialized = false;
+let initPromise: Promise<void> | null = null;
 
 function notify() {
   window.dispatchEvent(new Event(CHANGE_EVENT));
+}
+
+/**
+ * 全局唯一的登录态初始化：有 token 时拉取一次 /auth/me。
+ * 所有 useAuth 实例共享同一个 Promise，各自落自己的 state，
+ * 避免只有第一个执行 effect 的实例拿到用户、其它实例永远 loading。
+ */
+function ensureInit(): Promise<void> {
+  if (initPromise) return initPromise;
+  if (!getToken()) {
+    initPromise = Promise.resolve();
+    return initPromise;
+  }
+  initPromise = apiMe()
+    .then(({ user: u }) => {
+      cachedUser = u;
+    })
+    .catch(() => {
+      setToken(null);
+      cachedUser = null;
+    });
+  return initPromise;
 }
 
 /**
@@ -24,33 +46,24 @@ function notify() {
  */
 export default function useAuth() {
   const [user, setUser] = useState<User | null>(cachedUser);
-  const [loading, setLoading] = useState(!initialized && Boolean(getToken()));
+  const [loading, setLoading] = useState(() => Boolean(getToken()));
 
   useEffect(() => {
-    const sync = () => setUser(cachedUser);
-    window.addEventListener(CHANGE_EVENT, sync);
-    return () => window.removeEventListener(CHANGE_EVENT, sync);
-  }, []);
-
-  useEffect(() => {
-    if (initialized) return;
-    initialized = true;
-    const token = getToken();
-    if (!token) {
+    let active = true;
+    const sync = () => {
+      setUser(cachedUser);
       setLoading(false);
-      return;
-    }
-    apiMe()
-      .then(({ user: u }) => {
-        cachedUser = u;
-        setUser(u);
-      })
-      .catch(() => {
-        setToken(null);
-        cachedUser = null;
-        setUser(null);
-      })
-      .finally(() => setLoading(false));
+    };
+    window.addEventListener(CHANGE_EVENT, sync);
+    ensureInit().then(() => {
+      if (!active) return;
+      setUser(cachedUser);
+      setLoading(false);
+    });
+    return () => {
+      active = false;
+      window.removeEventListener(CHANGE_EVENT, sync);
+    };
   }, []);
 
   const login = useCallback(async (phone: string, password: string) => {
