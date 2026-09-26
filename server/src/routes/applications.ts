@@ -14,7 +14,7 @@ import {
 
 const router = Router();
 
-router.post("/", authMiddleware, requireRole("designer"), (req: AuthRequest, res) => {
+router.post("/", authMiddleware, requireRole("designer"), async (req: AuthRequest, res) => {
   const parsed = applicationSchema.safeParse(req.body);
   if (!parsed.success) {
     res.status(400).json({ error: parsed.error.errors[0]?.message || "参数错误" });
@@ -22,7 +22,7 @@ router.post("/", authMiddleware, requireRole("designer"), (req: AuthRequest, res
   }
   const { demandId, message, portfolioUrl } = parsed.data;
 
-  const demand = getDemandById(demandId);
+  const demand = await getDemandById(demandId);
   if (!demand) {
     res.status(404).json({ error: "需求不存在" });
     return;
@@ -32,20 +32,20 @@ router.post("/", authMiddleware, requireRole("designer"), (req: AuthRequest, res
     return;
   }
 
-  const existing = getApplication(demandId, req.user!.id);
+  const existing = await getApplication(demandId, req.user!.id);
   if (existing) {
     res.status(409).json({ error: "你已报名过该需求" });
     return;
   }
 
-  const application = createApplication({
+  const application = await createApplication({
     demandId,
     designerId: req.user!.id,
     message,
     portfolioUrl,
   });
 
-  createMessage({
+  await createMessage({
     userId: demand.village_id,
     type: "application",
     title: "收到新的报名申请",
@@ -56,17 +56,17 @@ router.post("/", authMiddleware, requireRole("designer"), (req: AuthRequest, res
   res.status(201).json({ application });
 });
 
-router.get("/my", authMiddleware, requireRole("designer"), (req: AuthRequest, res) => {
-  const applications = listApplications({ designerId: req.user!.id });
+router.get("/my", authMiddleware, requireRole("designer"), async (req: AuthRequest, res) => {
+  const applications = await listApplications({ designerId: req.user!.id });
   res.json({ applications });
 });
 
-router.get("/received", authMiddleware, requireRole("village"), (req: AuthRequest, res) => {
-  const applications = listApplications({ villageId: req.user!.id });
+router.get("/received", authMiddleware, requireRole("village"), async (req: AuthRequest, res) => {
+  const applications = await listApplications({ villageId: req.user!.id });
   res.json({ applications });
 });
 
-router.put("/:id/status", authMiddleware, requireRole("village"), (req: AuthRequest, res) => {
+router.put("/:id/status", authMiddleware, requireRole("village"), async (req: AuthRequest, res) => {
   const id = Number(req.params.id);
   if (!Number.isInteger(id)) {
     res.status(400).json({ error: "无效的报名 ID" });
@@ -79,27 +79,27 @@ router.put("/:id/status", authMiddleware, requireRole("village"), (req: AuthRequ
   }
   const { status } = parsed.data;
 
-  const application = getApplicationById(id);
+  const application = await getApplicationById(id);
   if (!application) {
     res.status(404).json({ error: "报名不存在" });
     return;
   }
-  const demand = getDemandById(application.demand_id);
+  const demand = await getDemandById(application.demand_id);
   if (!demand || demand.village_id !== req.user!.id) {
     res.status(403).json({ error: "无权限操作该报名" });
     return;
   }
 
-  const updated = updateApplicationStatus(id, status);
+  const updated = await updateApplicationStatus(id, status);
 
   if (status === "selected") {
-    createProject({
+    await createProject({
       demandId: demand.id,
       villageId: demand.village_id,
       designerId: application.designer_id,
       title: demand.title,
     });
-    createMessage({
+    await createMessage({
       userId: application.designer_id,
       type: "application",
       title: "报名已通过",
@@ -107,7 +107,7 @@ router.put("/:id/status", authMiddleware, requireRole("village"), (req: AuthRequ
       relatedId: application.id,
     });
   } else if (status === "rejected") {
-    createMessage({
+    await createMessage({
       userId: application.designer_id,
       type: "application",
       title: "报名未通过",
@@ -119,18 +119,18 @@ router.put("/:id/status", authMiddleware, requireRole("village"), (req: AuthRequ
   res.json({ application: updated });
 });
 
-router.get("/:id", authMiddleware, (req: AuthRequest, res) => {
+router.get("/:id", authMiddleware, async (req: AuthRequest, res) => {
   const id = Number(req.params.id);
   if (!Number.isInteger(id)) {
     res.status(400).json({ error: "无效的报名 ID" });
     return;
   }
-  const application = getApplicationById(id);
+  const application = await getApplicationById(id);
   if (!application) {
     res.status(404).json({ error: "报名不存在" });
     return;
   }
-  const demand = getDemandById(application.demand_id);
+  const demand = await getDemandById(application.demand_id);
   const isDesigner = application.designer_id === req.user!.id;
   const isVillage = demand?.village_id === req.user!.id;
   if (!isDesigner && !isVillage) {

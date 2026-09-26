@@ -5,8 +5,8 @@ import { getUserById, updateUser, getDesignerWithPortfolio, listDesigners } from
 
 const router = Router();
 
-router.get("/profile", authMiddleware, (req: AuthRequest, res) => {
-  const user = getUserById(req.user!.id);
+router.get("/profile", authMiddleware, async (req: AuthRequest, res) => {
+  const user = await getUserById(req.user!.id);
   if (!user) {
     res.status(404).json({ error: "用户不存在" });
     return;
@@ -27,13 +27,13 @@ router.get("/profile", authMiddleware, (req: AuthRequest, res) => {
   });
 });
 
-router.put("/profile", authMiddleware, (req: AuthRequest, res) => {
+router.put("/profile", authMiddleware, async (req: AuthRequest, res) => {
   const parsed = profileSchema.safeParse(req.body);
   if (!parsed.success) {
     res.status(400).json({ error: parsed.error.errors[0]?.message || "参数错误" });
     return;
   }
-  const user = updateUser(req.user!.id, parsed.data);
+  const user = await updateUser(req.user!.id, parsed.data);
   if (!user) {
     res.status(404).json({ error: "用户不存在" });
     return;
@@ -54,18 +54,18 @@ router.put("/profile", authMiddleware, (req: AuthRequest, res) => {
   });
 });
 
-router.get("/designers", (_req, res) => {
-  const designers = listDesigners();
+router.get("/designers", async (_req, res) => {
+  const designers = await listDesigners();
   res.json({ designers });
 });
 
-router.get("/designers/:id", (req, res) => {
+router.get("/designers/:id", async (req, res) => {
   const id = Number(req.params.id);
   if (!Number.isInteger(id)) {
     res.status(400).json({ error: "无效的用户 ID" });
     return;
   }
-  const designer = getDesignerWithPortfolio(id);
+  const designer = await getDesignerWithPortfolio(id);
   if (!designer) {
     res.status(404).json({ error: "设计师不存在" });
     return;

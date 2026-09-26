@@ -18,7 +18,7 @@ export function signToken(payload: { id: number; phone: string; name: string; ro
   return jwt.sign(payload, JWT_SECRET, { expiresIn: "7d" });
 }
 
-export function authMiddleware(req: AuthRequest, res: Response, next: NextFunction) {
+export async function authMiddleware(req: AuthRequest, res: Response, next: NextFunction) {
   const header = req.headers.authorization;
   if (!header?.startsWith("Bearer ")) {
     res.status(401).json({ error: "未登录" });
@@ -27,7 +27,7 @@ export function authMiddleware(req: AuthRequest, res: Response, next: NextFuncti
   const token = header.slice(7);
   try {
     const payload = jwt.verify(token, JWT_SECRET) as { id: number; phone: string; name: string; role: Role };
-    const user = getUserById(payload.id);
+    const user = await getUserById(payload.id);
     if (!user) {
       res.status(401).json({ error: "用户不存在" });
       return;

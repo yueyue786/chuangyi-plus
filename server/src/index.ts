@@ -10,7 +10,6 @@ import projectsRouter from "./routes/projects.js";
 import messagesRouter from "./routes/messages.js";
 
 dotenv.config();
-initDb();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -56,6 +55,15 @@ app.use((err: Error, _req: express.Request, res: express.Response, _next: expres
   res.status(500).json({ error: "服务器内部错误" });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// 建表 Promise：本地启动与云函数冷启动时都会等待它完成
+export const ready = initDb();
+
+// Vercel 等 Serverless 平台由平台接管 HTTP，仅本地/容器环境自行监听
+if (!process.env.VERCEL) {
+  await ready;
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
+export default app;

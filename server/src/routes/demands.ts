@@ -21,14 +21,14 @@ router.get(
     }
     next();
   },
-  (req: AuthRequest, res) => {
+  async (req: AuthRequest, res) => {
     const { status, category, mine } = req.query;
     if (mine === "1") {
       if (!req.user || req.user.role !== "village") {
         res.status(403).json({ error: "无权访问" });
         return;
       }
-      const demands = listDemands({
+      const demands = await listDemands({
         status: typeof status === "string" ? (status as never) : undefined,
         category: typeof category === "string" ? category : undefined,
         villageId: req.user.id,
@@ -36,7 +36,7 @@ router.get(
       res.json({ demands });
       return;
     }
-    const demands = listDemands({
+    const demands = await listDemands({
       status: typeof status === "string" ? (status as never) : undefined,
       category: typeof category === "string" ? category : undefined,
     });
@@ -44,18 +44,18 @@ router.get(
   }
 );
 
-router.get("/mine/list", authMiddleware, requireRole("village"), (req: AuthRequest, res) => {
-  const demands = listDemands({ villageId: req.user!.id });
+router.get("/mine/list", authMiddleware, requireRole("village"), async (req: AuthRequest, res) => {
+  const demands = await listDemands({ villageId: req.user!.id });
   res.json({ demands });
 });
 
-router.get("/:id", (req, res) => {
+router.get("/:id", async (req, res) => {
   const id = Number(req.params.id);
   if (!Number.isInteger(id)) {
     res.status(400).json({ error: "无效的需求 ID" });
     return;
   }
-  const demand = getDemandById(id);
+  const demand = await getDemandById(id);
   if (!demand) {
     res.status(404).json({ error: "需求不存在" });
     return;
@@ -63,17 +63,17 @@ router.get("/:id", (req, res) => {
   res.json({ demand });
 });
 
-router.post("/", authMiddleware, requireRole("village"), (req: AuthRequest, res) => {
+router.post("/", authMiddleware, requireRole("village"), async (req: AuthRequest, res) => {
   const parsed = demandSchema.safeParse(req.body);
   if (!parsed.success) {
     res.status(400).json({ error: parsed.error.errors[0]?.message || "参数错误" });
     return;
   }
-  const demand = createDemand({ villageId: req.user!.id, ...parsed.data });
+  const demand = await createDemand({ villageId: req.user!.id, ...parsed.data });
   res.status(201).json({ demand });
 });
 
-router.put("/:id", authMiddleware, requireRole("village"), (req: AuthRequest, res) => {
+router.put("/:id", authMiddleware, requireRole("village"), async (req: AuthRequest, res) => {
   const id = Number(req.params.id);
   if (!Number.isInteger(id)) {
     res.status(400).json({ error: "无效的需求 ID" });
@@ -84,7 +84,7 @@ router.put("/:id", authMiddleware, requireRole("village"), (req: AuthRequest, re
     res.status(400).json({ error: parsed.error.errors[0]?.message || "参数错误" });
     return;
   }
-  const demand = updateDemand(id, req.user!.id, parsed.data);
+  const demand = await updateDemand(id, req.user!.id, parsed.data);
   if (!demand) {
     res.status(404).json({ error: "需求不存在或无权限" });
     return;
@@ -92,18 +92,18 @@ router.put("/:id", authMiddleware, requireRole("village"), (req: AuthRequest, re
   res.json({ demand });
 });
 
-router.get("/:id/applications", authMiddleware, requireRole("village"), (req: AuthRequest, res) => {
+router.get("/:id/applications", authMiddleware, requireRole("village"), async (req: AuthRequest, res) => {
   const id = Number(req.params.id);
   if (!Number.isInteger(id)) {
     res.status(400).json({ error: "无效的需求 ID" });
     return;
   }
-  const demand = getDemandById(id);
+  const demand = await getDemandById(id);
   if (!demand || demand.village_id !== req.user!.id) {
     res.status(404).json({ error: "需求不存在或无权限" });
     return;
   }
-  const applications = listApplications({ demandId: id });
+  const applications = await listApplications({ demandId: id });
   res.json({ applications });
 });
 

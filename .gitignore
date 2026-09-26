@@ -11,6 +11,9 @@ server/dist/
 .env
 .env.local
 server/.env
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
 server/data.sqlite
 server/data.sqlite-shm
 server/data.sqlite-wal

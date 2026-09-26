@@ -14,14 +14,14 @@ router.post("/register", async (req, res) => {
   }
   const { phone, password, name, role, village, school, title } = parsed.data;
 
-  const existing = getUserByPhone(phone);
+  const existing = await getUserByPhone(phone);
   if (existing) {
     res.status(409).json({ error: "该手机号已注册" });
     return;
   }
 
   const passwordHash = await bcrypt.hash(password, 10);
-  const user = createUser({ phone, passwordHash, name, role, village, school, title });
+  const user = await createUser({ phone, passwordHash, name, role, village, school, title });
 
   const token = signToken({ id: user.id, phone: user.phone, name: user.name, role: user.role });
   res.status(201).json({
@@ -49,7 +49,7 @@ router.post("/login", async (req, res) => {
   }
   const { phone, password } = parsed.data;
 
-  const user = getUserByPhone(phone);
+  const user = await getUserByPhone(phone);
   if (!user) {
     res.status(401).json({ error: "手机号或密码错误" });
     return;
@@ -79,8 +79,8 @@ router.post("/login", async (req, res) => {
   });
 });
 
-router.get("/me", authMiddleware, (req: AuthRequest, res) => {
-  const user = getUserById(req.user!.id);
+router.get("/me", authMiddleware, async (req: AuthRequest, res) => {
+  const user = await getUserById(req.user!.id);
   if (!user) {
     res.status(404).json({ error: "用户不存在" });
     return;
