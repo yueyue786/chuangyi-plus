@@ -91,7 +91,7 @@ export const workbenchDemands: WorkbenchDemand[] = [
     deadline: "还剩 6 天",
     status: "招募中",
     thumb:
-      "https://readdy.ai/api/search-image?query=Rural%20village%20street%20corner%20micro%20renewal%20design%20sketch%20with%20wooden%20bench%2C%20green%20plants%20and%20white%20Hui-style%20walls%2C%20soft%20daylight%2C%20clean%20minimal%20composition%2C%20green%20and%20warm%20neutral%20tones&width=200&height=150&seq=cy-wb-dm-01&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(270)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231d3557%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23457b9d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Cpath%20d%3D%22M0%2C560%20L180%2C400%20L360%2C496%20L540%2C336%20L720%2C463.99999999999994%20L900%2C360%20L1080%2C440.00000000000006%20L1200%2C400%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.12)%22%2F%3E%3Cpath%20d%3D%22M0%2C656%20L240%2C528%20L456%2C608%20L660%2C480%20L864%2C576%20L1056%2C512%20L1200%2C576%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.20)%22%2F%3E%3C%2Fsvg%3E",
   },
   {
     id: "wd-2",
@@ -101,7 +101,7 @@ export const workbenchDemands: WorkbenchDemand[] = [
     deadline: "还剩 5 天",
     status: "招募中",
     thumb:
-      "https://readdy.ai/api/search-image?query=Traditional%20Huizhou%20fish%20lantern%20wayfinding%20sign%20system%20design%20display%20in%20an%20old%20village%20lane%2C%20warm%20evening%20light%2C%20clean%20minimal%20composition%2C%20green%20and%20warm%20tones&width=200&height=150&seq=cy-wb-dm-02&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(225)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23264653%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%232a9d8f%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22320%22%20r%3D%22200%22%20fill%3D%22rgba(255%2C255%2C255%2C0.10)%22%2F%3E%3Ccircle%20cx%3D%22840%22%20cy%3D%22520%22%20r%3D%22160%22%20fill%3D%22rgba(255%2C255%2C255%2C0.08)%22%2F%3E%3C%2Fsvg%3E",
   },
   {
     id: "wd-3",
@@ -111,7 +111,7 @@ export const workbenchDemands: WorkbenchDemand[] = [
     deadline: "还剩 1 天",
     status: "评审中",
     thumb:
-      "https://readdy.ai/api/search-image?query=Red%20culture%20study%20course%20material%20mockup%20with%20notebook%2C%20map%20and%20pencil%20on%20a%20wooden%20table%2C%20soft%20natural%20light%2C%20clean%20minimal%20background%2C%20warm%20tones&width=200&height=150&seq=cy-wb-dm-03&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(180)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%233a5a40%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e9edc9%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Cpath%20d%3D%22M0%2C560%20L180%2C400%20L360%2C496%20L540%2C336%20L720%2C463.99999999999994%20L900%2C360%20L1080%2C440.00000000000006%20L1200%2C400%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.12)%22%2F%3E%3Cpath%20d%3D%22M0%2C656%20L240%2C528%20L456%2C608%20L660%2C480%20L864%2C576%20L1056%2C512%20L1200%2C576%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.20)%22%2F%3E%3C%2Fsvg%3E",
   },
   {
     id: "wd-4",
@@ -121,7 +121,7 @@ export const workbenchDemands: WorkbenchDemand[] = [
     deadline: "还剩 2 天",
     status: "评审中",
     thumb:
-      "https://readdy.ai/api/search-image?query=Rural%20specialty%20product%20packaging%20design%20mockup%20with%20kraft%20paper%20and%20green%20illustration%20labels%20on%20a%20rustic%20wooden%20table%2C%20clean%20simple%20background%2C%20warm%20tones&width=200&height=150&seq=cy-wb-dm-04&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(135)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f5132%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23d4a373%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Cpath%20d%3D%22M0%2C560%20L180%2C400%20L360%2C496%20L540%2C336%20L720%2C463.99999999999994%20L900%2C360%20L1080%2C440.00000000000006%20L1200%2C400%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.12)%22%2F%3E%3Cpath%20d%3D%22M0%2C656%20L240%2C528%20L456%2C608%20L660%2C480%20L864%2C576%20L1056%2C512%20L1200%2C576%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.20)%22%2F%3E%3C%2Fsvg%3E",
   },
 ];
 
@@ -148,7 +148,7 @@ export const workbenchCases: WorkbenchCase[] = [
     tags: ["乡村空间", "民宿设计"],
     to: "/case/11",
     cover:
-      "https://readdy.ai/api/search-image?query=Landscape%20photograph%20of%20a%20restored%20old%20courtyard%20home%20turned%20into%20a%20boutique%20homestay%20interior%20in%20a%20Huizhou%20village%2C%20wooden%20structure%20with%20a%20bright%20skywell%2C%20local%20stone%20and%20timber%20materials%2C%20simple%20warm%20furnishings%20and%20handmade%20fabric%2C%20soft%20daylight%2C%20clean%20composition%2C%20warm%20neutral%20and%20green%20tones%2C%20high%20detail&width=800&height=600&seq=cj-house-cover-01&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(90)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23283618%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23bc6c25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22320%22%20r%3D%22200%22%20fill%3D%22rgba(255%2C255%2C255%2C0.10)%22%2F%3E%3Ccircle%20cx%3D%22840%22%20cy%3D%22520%22%20r%3D%22160%22%20fill%3D%22rgba(255%2C255%2C255%2C0.08)%22%2F%3E%3C%2Fsvg%3E",
   },
   {
     id: "wc-maying",
@@ -159,7 +159,7 @@ export const workbenchCases: WorkbenchCase[] = [
     tags: ["乡村空间", "社区营造"],
     to: "/case/10",
     cover:
-      "https://readdy.ai/api/search-image?query=Landscape%20photograph%20of%20a%20completed%20rural%20public%20courtyard%20renovation%20in%20a%20Chinese%20village%2C%20a%20former%20drying%20ground%20turned%20into%20a%20shared%20courtyard%20with%20wooden%20benches%2C%20a%20shade%20pergola%20and%20planted%20greenery%2C%20local%20brick%20and%20stone%20paving%2C%20rural%20houses%20behind%2C%20soft%20daylight%2C%20clean%20composition%2C%20warm%20neutral%20and%20green%20tones%2C%20high%20detail&width=800&height=600&seq=my-village-cover-01&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(315)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f5132%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23d4a373%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Cpath%20d%3D%22M0%2C560%20L180%2C400%20L360%2C496%20L540%2C336%20L720%2C463.99999999999994%20L900%2C360%20L1080%2C440.00000000000006%20L1200%2C400%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.12)%22%2F%3E%3Cpath%20d%3D%22M0%2C656%20L240%2C528%20L456%2C608%20L660%2C480%20L864%2C576%20L1056%2C512%20L1200%2C576%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.20)%22%2F%3E%3C%2Fsvg%3E",
   },
   {
     id: "wc-fish",
@@ -170,7 +170,7 @@ export const workbenchCases: WorkbenchCase[] = [
     tags: ["民俗IP", "文创开发"],
     to: "/case/9",
     cover:
-      "https://readdy.ai/api/search-image?query=Landscape%20photograph%20of%20a%20joyful%20traditional%20Chinese%20fish%20lantern%20folk%20parade%20in%20a%20Huizhou%20village%20at%20night%2C%20villagers%20holding%20colorful%20glowing%20fish%20shaped%20lanterns%2C%20warm%20festive%20lighting%2C%20white%20walled%20ancient%20houses%20behind%20the%20crowd%2C%20deep%20green%20and%20amber%20tones%2C%20clean%20composition%2C%20high%20detail&width=800&height=600&seq=wm-fish-cover-01&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(225)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23264653%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%232a9d8f%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22320%22%20r%3D%22200%22%20fill%3D%22rgba(255%2C255%2C255%2C0.10)%22%2F%3E%3Ccircle%20cx%3D%22840%22%20cy%3D%22520%22%20r%3D%22160%22%20fill%3D%22rgba(255%2C255%2C255%2C0.08)%22%2F%3E%3C%2Fsvg%3E",
   },
   {
     id: "wc-snake",
@@ -181,7 +181,7 @@ export const workbenchCases: WorkbenchCase[] = [
     tags: ["非遗活化", "文化转译"],
     to: "/case/8",
     cover:
-      "https://readdy.ai/api/search-image?query=Stylized%20guofeng%20flat%20illustration%20of%20a%20traditional%20Chinese%20snake%20lantern%20folk%20performance%2C%20villagers%20dancing%20and%20carrying%20a%20long%20illuminated%20serpent%20lantern%20made%20of%20bamboo%20and%20painted%20paper%2C%20deep%20green%20and%20warm%20gold%20palette%2C%20clean%20minimal%20light%20background%2C%20high%20detail&width=800&height=600&seq=cy-village-cover-01&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(45)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231b4332%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2352b788%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Cpath%20d%3D%22M0%2C560%20L180%2C400%20L360%2C496%20L540%2C336%20L720%2C463.99999999999994%20L900%2C360%20L1080%2C440.00000000000006%20L1200%2C400%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.12)%22%2F%3E%3Cpath%20d%3D%22M0%2C656%20L240%2C528%20L456%2C608%20L660%2C480%20L864%2C576%20L1056%2C512%20L1200%2C576%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.20)%22%2F%3E%3C%2Fsvg%3E",
   },
   {
     id: "wc-1",
@@ -190,7 +190,7 @@ export const workbenchCases: WorkbenchCase[] = [
     intro: "以在地徽文化为原点，重塑村落品牌视觉与导视系统。",
     tag: "文化振兴",
     cover:
-      "https://readdy.ai/api/search-image?query=Landscape%20photo%20of%20a%20rural%20village%20brand%20identity%20showcase%20with%20printed%20logo%20cards%2C%20wooden%20signage%20and%20canvas%20tote%20bags%20arranged%20in%20front%20of%20an%20old%20white-walled%20Hui-style%20village%20lane%2C%20soft%20daylight%2C%20clean%20minimal%20composition%2C%20green%20and%20warm%20neutral%20tones%2C%20high%20detail&width=800&height=560&seq=cy-wb-case-01&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(225)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23264653%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%232a9d8f%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22320%22%20r%3D%22200%22%20fill%3D%22rgba(255%2C255%2C255%2C0.10)%22%2F%3E%3Ccircle%20cx%3D%22840%22%20cy%3D%22520%22%20r%3D%22160%22%20fill%3D%22rgba(255%2C255%2C255%2C0.08)%22%2F%3E%3C%2Fsvg%3E",
   },
   {
     id: "wc-2",
@@ -199,7 +199,7 @@ export const workbenchCases: WorkbenchCase[] = [
     intro: "让山间好茶拥有会讲故事的包装，带动乡村特色产业。",
     tag: "产业振兴",
     cover:
-      "https://readdy.ai/api/search-image?query=Landscape%20photo%20of%20rural%20tea%20packaging%20and%20gift%20boxes%20with%20minimal%20green%20illustrations%20arranged%20on%20a%20rustic%20wooden%20table%2C%20soft%20natural%20light%2C%20clean%20simple%20background%2C%20green%20and%20warm%20tones%2C%20high%20detail&width=800&height=560&seq=cy-wb-case-02&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(180)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%233a5a40%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e9edc9%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Cpath%20d%3D%22M0%2C560%20L180%2C400%20L360%2C496%20L540%2C336%20L720%2C463.99999999999994%20L900%2C360%20L1080%2C440.00000000000006%20L1200%2C400%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.12)%22%2F%3E%3Cpath%20d%3D%22M0%2C656%20L240%2C528%20L456%2C608%20L660%2C480%20L864%2C576%20L1056%2C512%20L1200%2C576%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.20)%22%2F%3E%3C%2Fsvg%3E",
   },
   {
     id: "wc-3",
@@ -208,7 +208,7 @@ export const workbenchCases: WorkbenchCase[] = [
     intro: "用低介入的景观手法，为村民打造可停留的公共客厅。",
     tag: "生态振兴",
     cover:
-      "https://readdy.ai/api/search-image?query=Landscape%20photo%20of%20a%20renovated%20rural%20pocket%20park%20with%20a%20wooden%20pavilion%2C%20stone%20path%2C%20green%20plants%20and%20a%20small%20pond%20in%20a%20Chinese%20village%2C%20soft%20morning%20light%2C%20modern%20minimal%20rural%20architecture%2C%20green%20tones%2C%20high%20detail&width=800&height=560&seq=cy-wb-case-03&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(135)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f5132%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23d4a373%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Cpath%20d%3D%22M0%2C560%20L180%2C400%20L360%2C496%20L540%2C336%20L720%2C463.99999999999994%20L900%2C360%20L1080%2C440.00000000000006%20L1200%2C400%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.12)%22%2F%3E%3Cpath%20d%3D%22M0%2C656%20L240%2C528%20L456%2C608%20L660%2C480%20L864%2C576%20L1056%2C512%20L1200%2C576%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.20)%22%2F%3E%3C%2Fsvg%3E",
   },
 ];
 

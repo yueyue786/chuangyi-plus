@@ -15,7 +15,7 @@ export const myApplications: MyListItem[] = [
     status: "待审核",
     meta: "报名时间：2026-03-12 · 需求方：培田村委",
     cover:
-      "https://readdy.ai/api/search-image?query=Ancient%20Chinese%20ancestral%20hall%20with%20wooden%20brackets%20and%20stone%20courtyard%20in%20a%20green%20mountain%20village%2C%20soft%20morning%20light%2C%20warm%20earthy%20tones%2C%20architectural%20documentary%20photography%2C%20clean%20composition%2C%20high%20detail&width=720&height=480&seq=cy-my-apply-1&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(0)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%232d6a4f%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2374c69d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22320%22%20r%3D%22200%22%20fill%3D%22rgba(255%2C255%2C255%2C0.10)%22%2F%3E%3Ccircle%20cx%3D%22840%22%20cy%3D%22520%22%20r%3D%22160%22%20fill%3D%22rgba(255%2C255%2C255%2C0.08)%22%2F%3E%3C%2Fsvg%3E",
   },
   {
     id: "a2",
@@ -24,7 +24,7 @@ export const myApplications: MyListItem[] = [
     status: "已通过",
     meta: "报名时间：2026-02-28 · 需求方：双溪畲寨文化站",
     cover:
-      "https://readdy.ai/api/search-image?query=Hand%20drawn%20folk%20story%20illustration%20sketches%20spread%20on%20a%20desk%20with%20color%20pencils%20and%20paper%2C%20ethnic%20Chinese%20village%20motifs%2C%20soft%20warm%20light%2C%20cozy%20studio%20scene%2C%20green%20and%20orange%20accents%2C%20high%20detail&width=720&height=480&seq=cy-my-apply-2&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(45)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231b4332%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2352b788%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Cpath%20d%3D%22M0%2C560%20L180%2C400%20L360%2C496%20L540%2C336%20L720%2C463.99999999999994%20L900%2C360%20L1080%2C440.00000000000006%20L1200%2C400%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.12)%22%2F%3E%3Cpath%20d%3D%22M0%2C656%20L240%2C528%20L456%2C608%20L660%2C480%20L864%2C576%20L1056%2C512%20L1200%2C576%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.20)%22%2F%3E%3C%2Fsvg%3E",
   },
 ];
 
@@ -36,7 +36,7 @@ export const myWorks: MyListItem[] = [
     status: "已落地",
     meta: "完成于 2025-11 · 收录于乡村设计案例库",
     cover:
-      "https://readdy.ai/api/search-image?query=Village%20tea%20brand%20identity%20design%20flat%20lay%20on%20a%20wooden%20table%20with%20green%20packaging%20cards%2C%20logo%20sketches%2C%20tea%20leaves%20and%20kraft%20paper%2C%20soft%20natural%20daylight%2C%20minimal%20editorial%20product%20photography%2C%20green%20and%20cream%20palette%2C%20high%20detail&width=720&height=480&seq=cy-my-work-1&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(45)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231b4332%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2352b788%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Cpath%20d%3D%22M0%2C560%20L180%2C400%20L360%2C496%20L540%2C336%20L720%2C463.99999999999994%20L900%2C360%20L1080%2C440.00000000000006%20L1200%2C400%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.12)%22%2F%3E%3Cpath%20d%3D%22M0%2C656%20L240%2C528%20L456%2C608%20L660%2C480%20L864%2C576%20L1056%2C512%20L1200%2C576%20L1200%2C800%20L0%2C800%20Z%22%20fill%3D%22rgba(0%2C0%2C0%2C0.20)%22%2F%3E%3C%2Fsvg%3E",
   },
   {
     id: "w2",
@@ -45,6 +45,6 @@ export const myWorks: MyListItem[] = [
     status: "已落地",
     meta: "完成于 2025-09 · 收录于乡村设计案例库",
     cover:
-      "https://readdy.ai/api/search-image?query=Premium%20rice%20product%20packaging%20design%20mockup%20with%20green%20and%20kraft%20paper%20bags%20beside%20terraced%20rice%20fields%2C%20soft%20warm%20sunlight%2C%20clean%20simple%20background%2C%20minimal%20editorial%20photography%2C%20earthy%20green%20tones%2C%20high%20detail&width=720&height=480&seq=cy-my-work-2&orientation=landscape",
+      "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20800%22%20width%3D%221200%22%20height%3D%22800%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20gradientTransform%3D%22rotate(0)%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%232d6a4f%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2374c69d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%22800%22%20fill%3D%22url(%23g)%22%2F%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%22320%22%20r%3D%22200%22%20fill%3D%22rgba(255%2C255%2C255%2C0.10)%22%2F%3E%3Ccircle%20cx%3D%22840%22%20cy%3D%22520%22%20r%3D%22160%22%20fill%3D%22rgba(255%2C255%2C255%2C0.08)%22%2F%3E%3C%2Fsvg%3E",
   },
 ];
