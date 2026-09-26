@@ -17,6 +17,7 @@
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "serverless-http": "^3.2.0",
     "zod": "^3.24.1",
     "i18next": "^25.3.2",
     "react": "^19.1.2",
