@@ -22,11 +22,13 @@ const allowedOrigins = (
   .split(",")
   .map((s) => s.trim());
 
+const allowAll = allowedOrigins.includes("*");
+
 app.use(
   cors({
     origin(origin, callback) {
-      // 无 Origin（服务器间请求/同源代理）或在白名单内则放行
-      if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
+      // 无 Origin（服务器间请求/同源代理）、通配符配置或在白名单内则放行
+      if (!origin || allowAll || allowedOrigins.includes(origin)) return callback(null, true);
       return callback(null, false);
     },
     credentials: true,
